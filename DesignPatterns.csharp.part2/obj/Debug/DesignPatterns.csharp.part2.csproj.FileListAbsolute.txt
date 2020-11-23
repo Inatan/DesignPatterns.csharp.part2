@@ -1,0 +1,7 @@
+C:\Users\inatan.hertzog\Desktop\Inatan\Csharp\DesignPatterns\DesignPatterns.csharp.part2\DesignPatterns.csharp.part2\bin\Debug\DesignPatterns.csharp.part2.exe.config
+C:\Users\inatan.hertzog\Desktop\Inatan\Csharp\DesignPatterns\DesignPatterns.csharp.part2\DesignPatterns.csharp.part2\bin\Debug\DesignPatterns.csharp.part2.exe
+C:\Users\inatan.hertzog\Desktop\Inatan\Csharp\DesignPatterns\DesignPatterns.csharp.part2\DesignPatterns.csharp.part2\bin\Debug\DesignPatterns.csharp.part2.pdb
+C:\Users\inatan.hertzog\Desktop\Inatan\Csharp\DesignPatterns\DesignPatterns.csharp.part2\DesignPatterns.csharp.part2\obj\Debug\DesignPatterns.csharp.part2.csprojAssemblyReference.cache
+C:\Users\inatan.hertzog\Desktop\Inatan\Csharp\DesignPatterns\DesignPatterns.csharp.part2\DesignPatterns.csharp.part2\obj\Debug\DesignPatterns.csharp.part2.csproj.CoreCompileInputs.cache
+C:\Users\inatan.hertzog\Desktop\Inatan\Csharp\DesignPatterns\DesignPatterns.csharp.part2\DesignPatterns.csharp.part2\obj\Debug\DesignPatterns.csharp.part2.exe
+C:\Users\inatan.hertzog\Desktop\Inatan\Csharp\DesignPatterns\DesignPatterns.csharp.part2\DesignPatterns.csharp.part2\obj\Debug\DesignPatterns.csharp.part2.pdb
