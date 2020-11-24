@@ -3,6 +3,7 @@ using DesignPatterns.csharp.part2.Cap2;
 using DesignPatterns.csharp.part2.Cap3;
 using DesignPatterns.csharp.part2.Cap4;
 using DesignPatterns.csharp.part2.Cap5;
+using DesignPatterns.csharp.part2.Cap6;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -64,14 +65,21 @@ namespace DesignPatterns.csharp.part2
             //Console.WriteLine(funcao());
 
             //Cap 5 - Visitor
-            IExpressao esquerda = new Soma(new Numero(1), new Numero(10));
-            Console.WriteLine(esquerda.Avalia());
-            IExpressao direita = new Subtracao(new Numero(20), new Numero(10));
-            Console.WriteLine(direita.Avalia());
-            IExpressao soma = new Soma(esquerda, direita);
-            Console.WriteLine(soma.Avalia());
-            ImpressoraVisitor impressora = new ImpressoraVisitor();
-            soma.Aceita(impressora);
+            //IExpressao esquerda = new Soma(new Numero(1), new Numero(10));
+            //Console.WriteLine(esquerda.Avalia());
+            //IExpressao direita = new Subtracao(new Numero(20), new Numero(10));
+            //Console.WriteLine(direita.Avalia());
+            //IExpressao soma = new Soma(esquerda, direita);
+            //Console.WriteLine(soma.Avalia());
+            //ImpressoraVisitor impressora = new ImpressoraVisitor();
+            //soma.Aceita(impressora);
+
+            //Cap 6 - Bridge
+
+            IMensagem mensagem = new MensagemAdminstrativa("victor");
+            IEnviador enviador = new MensagemPorSms();
+            mensagem.Enviador = enviador;
+            mensagem.Envia();
 
             Console.ReadKey();
         }
