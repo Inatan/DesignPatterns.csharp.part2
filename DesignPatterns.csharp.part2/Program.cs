@@ -2,6 +2,7 @@
 using DesignPatterns.csharp.part2.Cap2;
 using DesignPatterns.csharp.part2.Cap3;
 using DesignPatterns.csharp.part2.Cap4;
+using DesignPatterns.csharp.part2.Cap5;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -58,9 +59,20 @@ namespace DesignPatterns.csharp.part2
 
             //Console.WriteLine(soma.Avalia());
             //Cap 4 - Interpreter nativo do C#
-            Expression soma = Expression.Add(Expression.Constant(10), Expression.Constant(100));
-            Func<int> funcao = Expression.Lambda<Func<int>>(soma).Compile();
-            Console.WriteLine(funcao());
+            //Expression soma = Expression.Add(Expression.Constant(10), Expression.Constant(100));
+            //Func<int> funcao = Expression.Lambda<Func<int>>(soma).Compile();
+            //Console.WriteLine(funcao());
+
+            //Cap 5 - Visitor
+            IExpressao esquerda = new Soma(new Numero(1), new Numero(10));
+            Console.WriteLine(esquerda.Avalia());
+            IExpressao direita = new Subtracao(new Numero(20), new Numero(10));
+            Console.WriteLine(direita.Avalia());
+            IExpressao soma = new Soma(esquerda, direita);
+            Console.WriteLine(soma.Avalia());
+            ImpressoraVisitor impressora = new ImpressoraVisitor();
+            soma.Aceita(impressora);
+
             Console.ReadKey();
         }
     }

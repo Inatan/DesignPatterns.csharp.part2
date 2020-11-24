@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DesignPatterns.csharp.part2.Cap5;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,11 @@ namespace DesignPatterns.csharp.part2.Cap4
             int valorDireita = Direita.Avalia();
             int valorEsquerda = Esquerda.Avalia();
             return valorEsquerda - valorDireita;
+        }
+
+        public void Aceita(ImpressoraVisitor impressora)
+        {
+            impressora.ImpremeSubtracao(this);
         }
     }
 }

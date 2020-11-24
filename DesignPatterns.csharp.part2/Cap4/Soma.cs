@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DesignPatterns.csharp.part2.Cap5;
 
 namespace DesignPatterns.csharp.part2.Cap4
 {
@@ -16,6 +17,11 @@ namespace DesignPatterns.csharp.part2.Cap4
 
         public IExpressao Esquerda { get; private set; }
         public IExpressao Direita { get; private set; }
+
+        public void Aceita(ImpressoraVisitor impressora)
+        {
+            impressora.ImpremeSoma(this);
+        }
 
         public int Avalia()
         {
