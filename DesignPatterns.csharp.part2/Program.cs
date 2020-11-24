@@ -4,6 +4,7 @@ using DesignPatterns.csharp.part2.Cap3;
 using DesignPatterns.csharp.part2.Cap4;
 using DesignPatterns.csharp.part2.Cap5;
 using DesignPatterns.csharp.part2.Cap6;
+using DesignPatterns.csharp.part2.Cap7;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -76,10 +77,22 @@ namespace DesignPatterns.csharp.part2
 
             //Cap 6 - Bridge
 
-            IMensagem mensagem = new MensagemAdminstrativa("victor");
-            IEnviador enviador = new MensagemPorSms();
-            mensagem.Enviador = enviador;
-            mensagem.Envia();
+            //IMensagem mensagem = new MensagemAdminstrativa("victor");
+            //IEnviador enviador = new MensagemPorSms();
+            //mensagem.Enviador = enviador;
+            //mensagem.Envia();
+
+            // Cap 7
+
+            FilaDeTrabalho fila = new FilaDeTrabalho();
+            Pedido pedido1 = new Pedido("Mauricio", 100.0);
+            Pedido pedido2 = new Pedido("Marcelo", 200.0);
+
+            fila.Adiciona(new PagaPedido(pedido1));
+            fila.Adiciona(new PagaPedido(pedido2));
+
+            fila.Adiciona(new FinalizaPedido(pedido1));
+            fila.Processa();
 
             Console.ReadKey();
         }
